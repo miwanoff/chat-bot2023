@@ -26,6 +26,10 @@ $(function () {
   });
 
   $("#ok").click(function () {
+    let q = $("#question").val().trim();
+    $("#question").val("");
+    $("#answers").append(`<div class="human_answ">${q}</div>`);
+    $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
     return false; // preventDefault and stopPropagation()
   });
 });
