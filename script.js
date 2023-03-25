@@ -17,5 +17,15 @@ $(function () {
 
   $("#answers").append(`<div class="bot_answ">${hello}</div>`);
 
+  $("#answers").click(function () {
+    return false; // preventDefault and stopPropagation()
+  });
 
+  $("#question").click(function () {
+    return false; // preventDefault and stopPropagation()
+  });
+
+  $("#ok").click(function () {
+    return false; // preventDefault and stopPropagation()
+  });
 });
