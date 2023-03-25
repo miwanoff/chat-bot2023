@@ -29,7 +29,11 @@ $(function () {
     let q = $("#question").val().trim();
     $("#question").val("");
     $("#answers").append(`<div class="human_answ">${q}</div>`);
-    $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
+    if (q.toLowerCase().includes("bye")) {
+      $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
+    } else {
+      $("#answers").append(`<div class="bot_answ">!!!</div>`);
+    }
     return false; // preventDefault and stopPropagation()
   });
 });
