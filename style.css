@@ -9,3 +9,16 @@
   overflow-y: auto;
   /* border-radius: 10px; */
 }
+
+#form_chatbot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-width: 100%;
+  min-height: 100%;
+}
+#form_chatbot input {
+  align-self: flex-start;
+  margin: 5px;
+}
