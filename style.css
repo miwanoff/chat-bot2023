@@ -8,6 +8,7 @@
   left: calc(100% - 45px);
   overflow-y: auto;
   /* border-radius: 10px; */
+  transition: 0.5s;
 }
 
 #form_chatbot {
@@ -21,4 +22,8 @@
 #form_chatbot input {
   align-self: flex-start;
   margin: 5px;
+}
+
+.show {
+    left: calc(100% - 290px) !important;
 }
