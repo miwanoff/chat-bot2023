@@ -30,17 +30,21 @@ $(function () {
     $("#question").val("");
     if (q != "") {
       $("#answers").append(`<div class="human_answ">${q}</div>`);
-      if (q.toLowerCase().includes("bye")) {
-        $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
-      } else {
-        $("#answers").append(`<div class="bot_answ">!!!</div>`);
-      }
-      let chatbot = document.getElementById("chatbot");
-      $("#chatbot").animate(
-        { scrollTop: chatbot.scrollHeight - chatbot.clientHeight },
-        100
-      );
+
+      setTimeout(function () {
+        if (q.toLowerCase().includes("bye")) {
+          $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
+        } else {
+          $("#answers").append(`<div class="bot_answ">!!!</div>`);
+        }
+        let chatbot = document.getElementById("chatbot");
+        $("#chatbot").animate(
+          { scrollTop: chatbot.scrollHeight - chatbot.clientHeight },
+          100
+        );
+      }, 1000);
     }
+
     return false; // preventDefault and stopPropagation()
   });
 });
