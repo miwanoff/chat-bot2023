@@ -36,7 +36,10 @@ $(function () {
         $("#answers").append(`<div class="bot_answ">!!!</div>`);
       }
       let chatbot = document.getElementById("chatbot");
-      $("#chatbot").animate({ scrollTop: 200 }, 500);
+      $("#chatbot").animate(
+        { scrollTop: chatbot.scrollHeight - chatbot.clientHeight },
+        100
+      );
     }
     return false; // preventDefault and stopPropagation()
   });
