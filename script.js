@@ -28,11 +28,15 @@ $(function () {
   $("#ok").click(function () {
     let q = $("#question").val().trim();
     $("#question").val("");
-    $("#answers").append(`<div class="human_answ">${q}</div>`);
-    if (q.toLowerCase().includes("bye")) {
-      $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
-    } else {
-      $("#answers").append(`<div class="bot_answ">!!!</div>`);
+    if (q != "") {
+      $("#answers").append(`<div class="human_answ">${q}</div>`);
+      if (q.toLowerCase().includes("bye")) {
+        $("#answers").append(`<div class="bot_answ">${goodbye}</div>`);
+      } else {
+        $("#answers").append(`<div class="bot_answ">!!!</div>`);
+      }
+      let chatbot = document.getElementById("chatbot");
+      $("#chatbot").animate({ scrollTop: 200 }, 500);
     }
     return false; // preventDefault and stopPropagation()
   });
