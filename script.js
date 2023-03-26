@@ -47,4 +47,13 @@ $(function () {
 
     return false; // preventDefault and stopPropagation()
   });
+
+  function enterKey(event) {
+    if (event.keyCode == 13) {
+      $("#ok").click();
+      return false;
+    }
+  }
+
+  $("#question").keypress("keyup", enterKey);
 });
